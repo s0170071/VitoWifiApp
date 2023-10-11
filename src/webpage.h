@@ -4,6 +4,7 @@
 /*
  * This is a small probing page. It allow you to enter a DP and get the response decoded for all possible data point types. 
  * Also, it allows you to quickly step forward to the next address. Handy for searching data points. 
+ * NOTE: adjust the Address below 192.168.1.111 to whatever IP your heater has.
  * 
 */
 
