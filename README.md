@@ -18,4 +18,6 @@ It features:
 
 
 Future work: beautyfy the webpage and make it adopt the IP as dynamic not static in the code
-![grafik](https://github.com/s0170071/VitoWifiApp/assets/33855380/98a69a49-96ad-4f86-8e00-1518e1b95aee)
+ 
+
+![grafik](https://github.com/s0170071/VitoWifiApp/assets/33855380/33d6f335-ce6f-45c0-b095-62cf4fb4beeb)
