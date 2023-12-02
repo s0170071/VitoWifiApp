@@ -4,7 +4,7 @@
 /*
  * This is a small probing page. It allow you to enter a DP and get the response decoded for all possible data point types. 
  * Also, it allows you to quickly step forward to the next address. Handy for searching data points. 
- * NOTE: adjust the Address below 192.168.1.111 to whatever IP your heater has.
+ * NOTE: adjust the Address below 192.168.1.151 to whatever IP your heater has.
  * 
 */
 
@@ -16,7 +16,7 @@ const char probingwebpage[] PROGMEM = R"rawliteral(
          var value = parseInt(document.getElementById('address').value, 16);
          value = isNaN(value) ? 0 : value+increment;
          var valuestring = "0x"+ value.toString(16);
-         var loc = "http://192.168.1.111/read?DP=" + valuestring + "&Type=all&ReadLen=4";
+         var loc = "/read?DP=" + valuestring + "&Type=all&ReadLen=4";
          document.getElementById('VitoDataIframe').src = loc;
          document.getElementById('address').value = valuestring;
       }
@@ -57,7 +57,7 @@ const char probingwebpage[] PROGMEM = R"rawliteral(
       function btnWriteValue(Mode) {
          var addr = document.getElementById('address').value;
          var value = document.getElementById('write'+Mode).value;
-         var LinkString = "http://192.168.1.111/write?DP="+addr+"&Type="+Mode+"&Value="+value; 
+         var LinkString = "/write?DP="+addr+"&Type="+Mode+"&Value="+value; 
          console.log(LinkString)
          
          document.getElementById('VitoResultIframe').src = LinkString;
@@ -72,7 +72,7 @@ const char probingwebpage[] PROGMEM = R"rawliteral(
    </script>
 
 
-</head><body><div id="duden-mentor_root"><div id="mentor-button-container" style="position: absolute; top: 0px; left: 0px; display: block;"><div id="mentor-overlay" style="position: absolute; pointer-events: none;"><div style="position: absolute; right: 10px; bottom: 10px; z-index: 9999; pointer-events: all; cursor: pointer;"><img alt="" src="moz-extension://9e0bcae1-84ef-4ccf-9c21-1db0843a500b/assets/icons/mentor.svg" width="24"></div></div></div><div class="overlay-background" style="display: none;"><div class="overlay-container"><div class="overlay-menu"><button class="knob knob--small" disabled="">Änderungen übernehmen</button><button class="knob knob--small knob--primary">Abbrechen</button></div><iframe src="moz-extension://9e0bcae1-84ef-4ccf-9c21-1db0843a500b/page/iFrame.html?parent=http://192.168.1.111" style="border: medium none; flex: 1 1 0%;"></iframe></div></div></div>
+</head><body><div id="duden-mentor_root"><div id="mentor-button-container" style="position: absolute; top: 0px; left: 0px; display: block;"><div id="mentor-overlay" style="position: absolute; pointer-events: none;"><div style="position: absolute; right: 10px; bottom: 10px; z-index: 9999; pointer-events: all; cursor: pointer;"><img alt="" src="moz-extension://9e0bcae1-84ef-4ccf-9c21-1db0843a500b/assets/icons/mentor.svg" width="24"></div></div></div><div class="overlay-background" style="display: none;"><div class="overlay-container"><div class="overlay-menu"><button class="knob knob--small" disabled="">Änderungen übernehmen</button><button class="knob knob--small knob--primary">Abbrechen</button></div><iframe src="moz-extension://9e0bcae1-84ef-4ccf-9c21-1db0843a500b/page/iFrame.html?parent=" style="border: medium none; flex: 1 1 0%;"></iframe></div></div></div>
    <h1>Vito WO1B data read</h1>
    <form>
       <input type="button" id="myBtn" onclick="incAddress(-1)" value="<">
@@ -80,7 +80,7 @@ const char probingwebpage[] PROGMEM = R"rawliteral(
       <input type="button" id="myBtn" onclick="incAddress(1)" value=">">
    </form>
 
-   <iframe id="VitoDataIframe" src="http://192.168.1.111/read?DP=0x0100&amp;Type=all&amp;ReadLen=4" onload="parseIframeValues('VitoDataIframe')" hidden=""> </iframe>
+   <iframe id="VitoDataIframe" src="/read?DP=0x0100&amp;Type=all&amp;ReadLen=4" onload="parseIframeValues('VitoDataIframe')" hidden=""> </iframe>
    <br>
    <a src="Github" href="https://github.com/openv/openv/issues/420">Github Datapoints </a>
    <br>

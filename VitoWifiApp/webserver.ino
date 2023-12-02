@@ -22,7 +22,7 @@ void WebserverLoop (void) {
 
 
 void handleRoot() {
-  myWebServer.send(200, "text/plain", probingwebpage);   
+  myWebServer.send(200, "text/html", probingwebpage);   
 }
 
 void handleNotFound(){
