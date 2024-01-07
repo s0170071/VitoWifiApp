@@ -90,11 +90,12 @@
     {"Einschalt_Primaerquelle",     0x0502, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
     {"Einschalt_Sekundaerquelle",   0x0504, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
     {"Verdichter_Umkehrungen",      0x051c, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
-    {"Hysterrese_Verdichter",       0x7304, CountL, 0.1 , RO , temperature, "°C"     , "sensor" , disabled  },    
+    {"Hysterrese_Verdichter",       0x7304, CountL, 0.1 , RO , temperature, "°C"     , "sensor" , low       },    
         //60     , temperature, "°C"
     {"Einschalt_Sekundaerquelle",   0x0504, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
     {"Einschalt_Durchlauferh_1",    0x0508, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
     {"Einschalt_Durchlauferh_2",    0x0509, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
+    {"LeistungDurchlauferhitzer",   0x7907, Mode,      1, RW , None,     ""          , "sensor" , low  }, 
     {"Einschalt_Heizkreis_A1",      0x050d, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
     {"Einschalt_Z_Pumpe",           0x0510, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
     {"Einschalt_Sammelmeldung",     0x0511, CountL,    1, RO , None,     ""          , "sensor" , disabled  }, 
